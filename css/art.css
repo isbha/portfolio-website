@@ -1,0 +1,167 @@
+#section01{
+    /*height: 100vh;*/
+    /*background: orange;*/
+    padding-bottom: 200px;
+}
+
+
+
+.h1_title{
+    width: 1120px;
+    margin: 0 auto 150px;
+    padding-top: 130px;
+}
+
+.gallery-section{
+    width: 100%;
+}
+
+.inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.gallery-section .gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.gallery-section .image{
+    flex: 20%;
+    margin: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-section .image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.gallery-section .image:hover img{
+    transform: scale(1.2);
+}
+
+
+
+#pop{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+}
+
+#pop.active{
+    opacity: 1;
+    z-index: 999999;
+}
+#pop_slider{
+    width: 436px;
+    height: 660px;
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+
+}
+#pop_slider .slick-track{
+    padding-bottom: 100px;
+}
+#pop_slider .slick-dots{
+    display: none !important;
+}
+
+#pop_slider .slick-slide{
+    position: relative;
+}
+
+#pop_slider img{
+    width: 100%;
+}
+
+
+#pop_slider .description{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+    bottom: -50px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+
+.prev{
+    cursor: pointer;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+
+
+
+.next{
+    cursor: pointer;
+    position: absolute;
+    right: 30%;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+
+.close{
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .gallery-section .image{
+        flex: 20%;
+    }
+    .inner-width{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #section01 .h1_title {
+        width: 80%;
+        min-width: 320px;
+    }
+    .gallery-section .image{
+        flex: 33.3%;
+    }
+    .prev,
+    .next{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .gallery-section .image{
+        flex: 33.3%;
+    }
+
+    #pop_slider{
+        width: 350px;
+        height: auto;
+
+    }
+}

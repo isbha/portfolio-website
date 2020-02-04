@@ -1,0 +1,252 @@
+
+
+
+
+
+#section01{
+    height: 100vh;
+    /*background: orange;*/
+}
+
+#section01 .text_container{
+    width: 546px;
+    position: absolute;
+    left: 211px;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+#section01 .text_container > *{
+    transform:translateX(30px);
+    opacity: 0;
+    transition:all 1s;
+}
+
+#section01 .text_container > *:nth-child(1){transition-delay:0.2s}
+#section01 .text_container > *:nth-child(2){transition-delay:0.4s}
+#section01 .text_container > *:nth-child(3){transition-delay:0.6s}
+
+
+
+
+#section01 .text_container.on > *{
+    transform:translateX(0);
+    opacity: 1;
+}
+
+
+
+#section01 .text_container > h2{
+    margin-bottom: 51px;
+    line-height: 1.3;
+    font-weight: 300;
+
+}
+#section01 .text_container > p{
+    font-size: 16px;
+    color: #6b6b6b;
+    margin-bottom: 56px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+
+#section01 .text_container .arrow span{
+    margin-right: 15px;
+}
+
+#section01 .text_container .arrow a{
+    color: #000;
+    font-family: 'Titillium Web', sans-serif;
+    /*font-weight: 300;*/
+}
+
+#section01 .text_container .arrow{
+    font-size: 20px;
+}
+
+#section01 .text_container .arrow > a:hover{
+    color: blue;
+}
+
+
+#logo{
+    width: 420px;
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform:translate(-50%,-50%);
+    transition:all .5s cubic-bezier(0.96, 0.1, 0, 0.85);
+}
+
+
+#logo.on{
+    transform:translate(-50%,-50%)rotate(-45deg);
+}
+#logo.on2{
+    transform:translate(40%,-50%)rotate(-45deg);
+}
+
+.scroll{
+    display: none;
+}
+
+#section02{
+    /*height: 100vh;*/
+    /*background: dodgerblue;*/
+    display: none;
+    padding-bottom: 200px;
+    padding-top: 200px;
+}
+
+
+#footer{
+    display: none;
+}
+
+
+#section02 h3{
+    width: 199px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: #000000;
+    margin: 0 auto 162.8px ;
+    position: relative;
+}
+
+#section02 h3:before{
+    content: '';
+    width: 3px;
+    height: 22px;
+    background-color: #283891;
+    position: absolute;
+    left: -10px;
+    top: 0;
+
+}
+
+
+#section02 .contents_container{
+    display: flex;
+    justify-content: center;
+}
+#section02 .contents_container > li{
+    position: relative;
+}
+#section02 .contents_container > li:nth-child(2){
+    margin: 0 51px;
+}
+
+
+#section02 .contents_container > li:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0);
+    transition:all .5s;
+    pointer-events: none;
+
+}
+
+#section02 .contents_container > li:hover:before{
+    background: rgba(0, 0, 0, 0.64);
+}
+
+
+
+#section02 .contents_container > li:after{
+    width: 150px;
+    height: 50px;
+    border-radius: 3px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-30%);
+    /*border: 1px solid #fff;*/
+    transition:all .5s;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size: 30px;
+
+}
+
+#section02 .contents_container > li:nth-child(1):after{content: 'UI/UX';}
+#section02 .contents_container > li:nth-child(2):after{content: '3D Product';}
+#section02 .contents_container > li:nth-child(3):after{content: 'Art';}
+
+
+
+
+#section02 .contents_container > li:hover:after{
+    opacity: 1;
+    transform:translate(-50%,-50%);
+}
+
+
+
+
+@media screen and (max-width:1100px){
+
+    #section01 .text_container{
+        width: 28%;
+        min-width:320px;
+        left: 10%;
+    }
+    #logo{
+        width: 200px;
+        /*display: none;*/
+    }
+    #section02 .contents_container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #section02 .contents_container > li:nth-child(2){
+        margin: 51px 0;
+    }
+
+    .scroll{
+        display: none !important;
+    }
+}
+
+
+
+@media screen and (max-width:800px){
+
+    #section01 .text_container .main_title{
+       font-size: 24px;
+    }
+
+
+    #section02 .contents_container > li img{
+        width: 100%;
+    }
+
+    #section02 .contents_container > li{
+        width: 90%;
+        min-width:320px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
